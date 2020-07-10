@@ -499,7 +499,7 @@ for(i=0;i<78;i++){
         b = this.textContent.indexOf(")") 
         str = this.textContent.substring(a + 1 , b)   
     
-        const res3 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1h&access_key=9lzTw36Ofr3S5XgwrSpQzmDww0Djz7WhFortdo8BlXmmNrjzZt")
+        const res3 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1h&access_key=J3eBdwOYNDPA9Y7vJuMhdchGgcRUdMcbd2kWLUHTK2f5XSCrYd")
         const data3 = await res3.json()
         if(data3.code === 200){
             n=0;
@@ -519,7 +519,7 @@ for(i=0;i<78;i++){
     else{
         alert("Try again after a minute! Sorry for inconvenience")
     }
-        const res4 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1d&access_key=J3eBdwOYNDPA9Y7vJuMhdchGgcRUdMcbd2kWLUHTK2f5XSCrYd")
+        const res4 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1d&access_key=9lzTw36Ofr3S5XgwrSpQzmDww0Djz7WhFortdo8BlXmmNrjzZt")
         const data4 = await res4.json()
         if(data4.code === 200){
             m=0;
