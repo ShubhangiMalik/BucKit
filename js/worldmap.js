@@ -88,7 +88,7 @@ DZ : "DZD" ,
 EC : "USD" ,
 EG : "EGP" ,
 EE : "EUR" ,
-EH : "MAD" , //CHECK
+EH : "MAD" , 
 ER : "ERN" ,
 ES : "EUR" ,
 ET : "ETB" ,
@@ -536,7 +536,7 @@ for(i=0;i<78;i++){
              }
         }       
         else{
-            alert("Try again after a minute! Sorry for inconvenience")
+            console.log("Try again after a minute")
         }
                
             window.scrollTo(0, document.body.scrollHeight)
