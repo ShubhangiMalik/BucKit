@@ -1,0 +1,177 @@
+body{
+    background-color:#001540;
+    color: 	#C8C8C8;
+    font-family:'Open Sans', sans-serif;
+    
+}
+
+th{
+    font-weight: 400;
+}
+.mapdiv{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.one{
+    margin-top:55px;
+}
+
+.row{
+    margin-top: 80px;
+}
+
+nav{
+    position: fixed;
+    background-color: #000033;
+}
+.mapdiv path {
+   fill: rgba(255,160,122,1);
+   stroke: white;
+   stroke-width: 1px;
+   transition: fill 0.3s ;
+   cursor:pointer;
+}
+.active{
+    fill: 	#FF4500;
+}
+.mapdiv path:hover {
+    fill: 	rgba(255,69,0);
+}
+
+
+.hide{
+   display: none;
+}
+
+    .topCur{
+        cursor: pointer;
+    }
+
+    table {
+        margin-right: 50px;
+        margin-left: 20px;
+        table-layout: fixed;
+        width: 90%;
+        font-size: calc(14px + (15 - 14) * ((100vw - 300px) / (1600 - 300)));
+        text-align: center;
+        border-collapse: collapse;
+        
+      }
+      
+      thead th:nth-child(1) {
+        width: 50%;
+      }
+      
+      thead th:nth-child(2) {
+        width: 45%;
+      }
+      
+      thead th:nth-child(3) {
+        width: 45%;
+      }
+      
+       thead th {
+        letter-spacing: 1px;
+        padding: 15px;
+        color: 	#F0F0F0;
+        font-weight: 700;
+        background-color: #000033;
+        font-size: calc(15px + (16 - 15) * ((100vw - 300px) / (1600 - 300)));
+      }
+      
+      td {
+       
+        padding: 17px 40px;
+      }
+      
+      tbody tr:nth-child(odd) {
+        background-color:	rgba(0,0,51,0.4) ;
+      }
+      
+      tbody tr:nth-child(even) {
+        background-color: #000033;
+      }
+      
+       tbody th{
+           font-weight: 500;
+          
+      }
+
+      tbody tr{
+          padding:10px 8px;
+      }
+
+      #styling1{
+          text-align: center;
+          margin:100px 20px 45px 20px;
+          text-shadow: 2px 2px 2px black;
+          font-weight: 600;
+          color:#F0F0F0 ;
+          font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (1600 - 300)));
+      }
+
+      .styling2{
+        text-align: center;
+        margin-top :130px;
+        margin-bottom: 40px;
+        color:#F0F0F0;
+        text-shadow: 3px 3px 15px black;
+        font-weight: 700;
+        font-size: calc(17px + (28 - 17) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+    .cols p{
+        font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+        text-align: left;
+        margin-left: 100px;
+
+    }
+
+    .cols p:hover{
+        font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+        color: white;
+        text-decoration: underline;
+        
+    }
+
+    #click{
+        text-align: center;
+        color:gray;
+        margin-bottom: 50px;
+        font-size:calc(11px + (16 - 11) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+    .togglers{
+        
+        margin:80px auto 20px auto;
+    }
+
+    #styling3{
+        text-align: center;
+        margin:120px 20px 50px 20px;
+        color:#F0F0F0;
+        line-height: 5px;
+        text-shadow: 2px 2px 5px black;
+        font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+    .styling4{
+        text-align: right;
+       margin-right: 80px;
+        color: gray;
+        
+        font-size:calc(8px + (14 - 8) * ((100vw - 300px) / (1600 - 300)))
+
+    }
+#countryName{
+    margin:5px 20px 40px 20px; 
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+          font-weight: 600;
+          color:#F0F0F0 ;
+          font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
+}
+   
