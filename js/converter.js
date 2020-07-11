@@ -80,20 +80,21 @@ var week = document.querySelectorAll(".week")
 async function fetchingData(){
     const res = await fetch("https://fcsapi.com/api-v2/forex/converter?symbol="  + baseCurrency.value + "/" + quoteCurrency.value + "&amount=" + amount.value + "&access_key=13I3WLdfCwDa0cpqyJ22NnmwgiZliKrbKUdRYUtbhJc56bWnqf")
     const data = await res.json()
-   if(data.code === 200){
-            result.classList.remove("hide")
-            amtValue.textContent = amount.value
-            convertedValue.textContent = data.response.total
-            time.textContent = data.info.server_time
-            qValue.textContent = data.response[Object.keys(data.response)[0]]
-            bValue.textContent = data.response[Object.keys(data.response)[1]]
-            for( i=0; i<3; i++){
-                base[i].textContent = baseCurrency.value
-                quote[i].textContent = quoteCurrency.value
-            } 
-   }else{
-       alert("Try again after a minute! Sorry for inconvenience")
-   }
+     if(data.code === 200){
+        result.classList.remove("hide")
+        amtValue.textContent = amount.value
+        convertedValue.textContent = data.response.total
+        time.textContent = data.info.server_time
+        qValue.textContent = data.response[Object.keys(data.response)[0]]
+        bValue.textContent = data.response[Object.keys(data.response)[1]]
+        for( i=0; i<3; i++){
+            base[i].textContent = baseCurrency.value
+            quote[i].textContent = quoteCurrency.value
+        } 
+     }else{
+         alert("Try again after a minute! Sorry for inconvenience")
+     }
+            
 }
 
 
@@ -112,6 +113,15 @@ async function fetchingData(){
 
 //     // function graphData(){
      
+
+//     //     fetch("http://www.omdbapi.com/?s=zindagi&apikey=56d64f03")
+//     //     .then((res) => { 
+//     //         res.json()
+//     //         .then((data) => {
+//     //             return(data.Search[data.Search.length - 1].Title)
+//     //         })
+//     //     })  
+//     // }
 
 //     var dailyValues = [];
 //     var y = new Date
