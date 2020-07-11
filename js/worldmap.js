@@ -827,7 +827,7 @@ path[i].addEventListener( "mouseenter", async function(){
 hrBtn.addEventListener("click" , async() =>{
     ctx2.canvas.style.display = "none"
     ctx.canvas.style.display = "block"
-    myGraph(DnT , cPrice , high , low)})
+    myGraph(DnTb , cPrice , high , low)})
 var cPrice2 =[]
 var high2 =[]
 var low2 =[]
