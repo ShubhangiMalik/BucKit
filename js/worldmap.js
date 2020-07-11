@@ -462,7 +462,7 @@ ZWL: "Zimbabwean Dollar"
 
 
 async function topCurrencies(){
-    const res2 = await fetch("https://fcsapi.com/api-v2/forex/list?type=forex&top_symbol=1&access_key=J3eBdwOYNDPA9Y7vJuMhdchGgcRUdMcbd2kWLUHTK2f5XSCrYd")
+    const res2 = await fetch("https://fcsapi.com/api-v2/forex/list?type=forex&top_symbol=1&access_key=13I3WLdfCwDa0cpqyJ22NnmwgiZliKrbKUdRYUtbhJc56bWnqf")
     const data2 = await res2.json()
     if(data2.code === 200){
     listUpdated.textContent = data2.info.server_time
