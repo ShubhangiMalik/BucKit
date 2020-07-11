@@ -768,7 +768,7 @@ path[i].addEventListener( "mouseenter", async function(){
     const res = await fetch("https://api.exchangerate.host/latest?base=" + countryCur[this.getAttribute('id')])
     const data = await res.json()
     baseCur.textContent = curName[countryCur[this.getAttribute('id')]]
-    date.textContent = data.date
+   // date.textContent = data.date
     countryName.textContent = this.getAttribute('title')
     for(j=0;j< 171 ;j++){
         val[j].textContent = data.rates[Object.keys(data.rates)[j]]
@@ -795,7 +795,7 @@ path[i].addEventListener( "mouseenter", async function(){
         const res = await fetch("https://api.exchangerate.host/latest?base=" + countryCur[this.getAttribute('id')])
         const data = await res.json()
         
-        date.textContent = data.date
+     //   date.textContent = data.date
         for(j=0;j< 171;j++){
             val[j].textContent = data.rates[Object.keys(data.rates)[j]]
             val2[j].textContent = (1/(data.rates[Object.keys(data.rates)[j]])).toFixed(6)
