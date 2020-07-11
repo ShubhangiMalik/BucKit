@@ -80,7 +80,7 @@ var week = document.querySelectorAll(".week")
 async function fetchingData(){
     const res = await fetch("https://fcsapi.com/api-v2/forex/converter?symbol="  + baseCurrency.value + "/" + quoteCurrency.value + "&amount=" + amount.value + "&access_key=9lzTw36Ofr3S5XgwrSpQzmDww0Djz7WhFortdo8BlXmmNrjzZt")
     const data = await res.json()
-   
+   if(data.code === 200){
             result.classList.remove("hide")
             amtValue.textContent = amount.value
             convertedValue.textContent = data.response.total
@@ -91,6 +91,8 @@ async function fetchingData(){
                 base[i].textContent = baseCurrency.value
                 quote[i].textContent = quoteCurrency.value
             } 
+   }else{
+       alert("Try again after a minute! Sorry for inconvenience")
 }
 
 
@@ -109,15 +111,6 @@ async function fetchingData(){
 
 //     // function graphData(){
      
-
-//     //     fetch("http://www.omdbapi.com/?s=zindagi&apikey=56d64f03")
-//     //     .then((res) => { 
-//     //         res.json()
-//     //         .then((data) => {
-//     //             return(data.Search[data.Search.length - 1].Title)
-//     //         })
-//     //     })  
-//     // }
 
 //     var dailyValues = [];
 //     var y = new Date
