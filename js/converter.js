@@ -93,6 +93,7 @@ async function fetchingData(){
             } 
    }else{
        alert("Try again after a minute! Sorry for inconvenience")
+   }
 }
 
 
