@@ -78,7 +78,7 @@ var week = document.querySelectorAll(".week")
 // }
 
 async function fetchingData(){
-    const res = await fetch("https://fcsapi.com/api-v2/forex/converter?symbol="  + baseCurrency.value + "/" + quoteCurrency.value + "&amount=" + amount.value + "&access_key=FBcfjcpUx2L3uN2A3ZwIOd2tnYeyENIaU5vDI8W7h25LJCZps")
+    const res = await fetch("https://fcsapi.com/api-v2/forex/converter?symbol="  + baseCurrency.value + "/" + quoteCurrency.value + "&amount=" + amount.value + "&access_key=9lzTw36Ofr3S5XgwrSpQzmDww0Djz7WhFortdo8BlXmmNrjzZt")
     const data = await res.json()
    
             result.classList.remove("hide")
