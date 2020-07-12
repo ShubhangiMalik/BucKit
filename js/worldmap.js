@@ -5,7 +5,7 @@ var val2 = document.querySelectorAll(".val2")
 var baseCur = document.querySelectorAll(".baseCur")
 var baseCode = document.querySelectorAll(".baseCode")
 var cur =  document.querySelectorAll(".cur")
-var date = document.querySelector("#date")
+var date1 = document.querySelector("#date1")
 var topCur = document.querySelectorAll(".topCur")
 var ctx = document.getElementById('myChart').getContext('2d');
 var ctx2 = document.getElementById('myChart2').getContext('2d');
@@ -88,7 +88,7 @@ DZ : "DZD" ,
 EC : "USD" ,
 EG : "EGP" ,
 EE : "EUR" ,
-EH : "MAD" , 
+EH : "MAD" , //CHECK
 ER : "ERN" ,
 ES : "EUR" ,
 ET : "ETB" ,
@@ -462,7 +462,7 @@ ZWL: "Zimbabwean Dollar"
 
 
 async function topCurrencies(){
-    const res2 = await fetch("https://fcsapi.com/api-v2/forex/list?type=forex&top_symbol=1&access_key=13I3WLdfCwDa0cpqyJ22NnmwgiZliKrbKUdRYUtbhJc56bWnqf")
+    const res2 = await fetch("https://fcsapi.com/api-v2/forex/list?type=forex&top_symbol=1&access_key=J3eBdwOYNDPA9Y7vJuMhdchGgcRUdMcbd2kWLUHTK2f5XSCrYd")
     const data2 = await res2.json()
     if(data2.code === 200){
     listUpdated.textContent = data2.info.server_time
@@ -474,7 +474,7 @@ async function topCurrencies(){
   } 
 }
 
-topCurrencies()
+//topCurrencies()
 let a
 let b
 let str
@@ -499,7 +499,7 @@ for(i=0;i<78;i++){
         b = this.textContent.indexOf(")") 
         str = this.textContent.substring(a + 1 , b)   
     
-        const res3 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1h&access_key=J3eBdwOYNDPA9Y7vJuMhdchGgcRUdMcbd2kWLUHTK2f5XSCrYd")
+        const res3 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1h&access_key=9lzTw36Ofr3S5XgwrSpQzmDww0Djz7WhFortdo8BlXmmNrjzZt")
         const data3 = await res3.json()
         if(data3.code === 200){
             n=0;
@@ -519,7 +519,7 @@ for(i=0;i<78;i++){
     else{
         alert("Try again after a minute! Sorry for inconvenience")
     }
-        const res4 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1d&access_key=9lzTw36Ofr3S5XgwrSpQzmDww0Djz7WhFortdo8BlXmmNrjzZt")
+        const res4 = await fetch("https://fcsapi.com/api-v2/forex/history?symbol=" + str + "&period=1d&access_key=J3eBdwOYNDPA9Y7vJuMhdchGgcRUdMcbd2kWLUHTK2f5XSCrYd")
         const data4 = await res4.json()
         if(data4.code === 200){
             m=0;
@@ -536,7 +536,7 @@ for(i=0;i<78;i++){
              }
         }       
         else{
-            console.log("Try again after a minute")
+            alert("Try again after a minute! Sorry for inconvenience")
         }
                
             window.scrollTo(0, document.body.scrollHeight)
@@ -768,7 +768,7 @@ path[i].addEventListener( "mouseenter", async function(){
     const res = await fetch("https://api.exchangerate.host/latest?base=" + countryCur[this.getAttribute('id')])
     const data = await res.json()
     baseCur.textContent = curName[countryCur[this.getAttribute('id')]]
-   // date.textContent = data.date
+    //date1.textContent = data.date
     countryName.textContent = this.getAttribute('title')
     for(j=0;j< 171 ;j++){
         val[j].textContent = data.rates[Object.keys(data.rates)[j]]
@@ -779,7 +779,7 @@ path[i].addEventListener( "mouseenter", async function(){
           baseCur[j].textContent = curName[countryCur[this.getAttribute('id')]].toUpperCase()
 
     }
-    console.log(data)
+   //console.log(data.date)
        
 })
  }
@@ -792,19 +792,19 @@ path[i].addEventListener( "mouseenter", async function(){
         this.style.fill = "	#FF4500"
         previous = this
         
-        const res = await fetch("https://api.exchangerate.host/latest?base=" + countryCur[this.getAttribute('id')])
-        const data = await res.json()
+        const res6 = await fetch("https://api.exchangerate.host/latest?base=" + countryCur[this.getAttribute('id')])
+        const data6 = await res6.json()
         
-     //   date.textContent = data.date
+        //date1.textContent = data6.date
         for(j=0;j< 171;j++){
-            val[j].textContent = data.rates[Object.keys(data.rates)[j]]
-            val2[j].textContent = (1/(data.rates[Object.keys(data.rates)[j]])).toFixed(6)
+            val[j].textContent = data6.rates[Object.keys(data6.rates)[j]]
+            val2[j].textContent = (1/(data6.rates[Object.keys(data6.rates)[j]])).toFixed(6)
         }
         for(j=0;j< 2 ;j++){
             baseCode[j].textContent = countryCur[this.getAttribute('id')]
             baseCur[j].textContent = curName[countryCur[this.getAttribute('id')]].toUpperCase()
         }
-        console.log(data.rates)
+        //console.log(data6.date)
         
         //const res2 = await fetch("https://fcsapi.com/api-v2/forex/list?type=forex&top_symbol=1&access_key=FBcfjcpUx2L3uN2A3ZwIOd2tnYeyENIaU5vDI8W7h25LJCZps")
         //const data2 = await res2.json()
@@ -822,6 +822,7 @@ path[i].addEventListener( "mouseenter", async function(){
 
          
     })
+    
 }
 
 hrBtn.addEventListener("click" , async() =>{

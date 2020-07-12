@@ -7,7 +7,7 @@ let time = document.querySelectorAll(".time")
 var i;
 
 async function fetchingData2(){
-    const res= await fetch("https://content.guardianapis.com/search?q=currency%20AND%20finance%20AND%20forex&api-key=4975a27a-c959-4e42-a2ea-359f7455f98d")
+    const res= await fetch("https://content.guardianapis.com/search?q=finance&order-by=newest&api-key=4975a27a-c959-4e42-a2ea-359f7455f98d")
     const data = await res.json()
     for(i=0; i<data.response.results.length; i++){
         titles[i].textContent = data.response.results[i].webTitle
