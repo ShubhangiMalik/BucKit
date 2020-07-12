@@ -474,7 +474,7 @@ async function topCurrencies(){
   } 
 }
 
-//topCurrencies()
+topCurrencies()
 let a
 let b
 let str
